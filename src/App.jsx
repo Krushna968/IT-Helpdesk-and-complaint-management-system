@@ -50,8 +50,8 @@ import {
 const INITIAL_PRODUCTS = [
   {
     id: 'prod-1',
-    sku: 'AF-BRK-1200-S',
-    name: 'Autoforge AccuVent Slotted Brake Rotor Pair (Front)',
+    sku: 'VAR-BRK-1200-S',
+    name: 'Varroc AccuVent Slotted Brake Rotor Pair (Front)',
     category: 'Brake Systems',
     price: 4850,
     originalPrice: 6200,
@@ -76,7 +76,7 @@ const INITIAL_PRODUCTS = [
   },
   {
     id: 'prod-2',
-    sku: 'AF-ENG-4502-K',
+    sku: 'VAR-ENG-4502-K',
     name: 'ProSeries Forged Connecting Rod & Piston Kit (Set of 4)',
     category: 'Engine Spares',
     price: 16999,
@@ -101,7 +101,7 @@ const INITIAL_PRODUCTS = [
   },
   {
     id: 'prod-3',
-    sku: 'AF-TRB-7001-X',
+    sku: 'VAR-TRB-7001-X',
     name: 'Twin-Scroll High Performance Turbocharger Core',
     category: 'Engine Spares',
     price: 28400,
@@ -126,7 +126,7 @@ const INITIAL_PRODUCTS = [
   },
   {
     id: 'prod-4',
-    sku: 'AF-FLT-0985-PE',
+    sku: 'VAR-FLT-0985-PE',
     name: 'Micro-Pore Synthetic Extended Life Oil Filter (Packet 3)',
     category: 'Maintenance Kits',
     price: 1290,
@@ -150,7 +150,7 @@ const INITIAL_PRODUCTS = [
   },
   {
     id: 'prod-5',
-    sku: 'AF-TRN-5520-K',
+    sku: 'VAR-TRN-5520-K',
     name: 'Heavy-Duty Dual Mass Flywheel & Clutch Assembly',
     category: 'Transmission',
     price: 22750,
@@ -174,7 +174,7 @@ const INITIAL_PRODUCTS = [
   },
   {
     id: 'prod-6',
-    sku: 'AF-SUS-3200-G',
+    sku: 'VAR-SUS-3200-G',
     name: 'Inverted Monotube Gas-Charged Front Strut Assembly',
     category: 'Suspension',
     price: 6400,
@@ -205,8 +205,8 @@ const INITIAL_TICKETS = [
     category: 'Hardware',
     reporter: 'Rajesh Kumar',
     reporterRole: 'Senior Shopfloor Engineer',
-    empId: 'AF-EMP-4091',
-    department: 'Production Engineering, Manesar Plant 2',
+    empId: 'VAR-EMP-4091',
+    department: 'Manufacturing Operations, Chakan Plant, Pune',
     assetTag: 'MC-CNC-04B',
     urgency: 'Critical',
     slaTime: '< 1 Hour (Line Stoppage)',
@@ -227,8 +227,8 @@ const INITIAL_TICKETS = [
     category: 'ERP / Access',
     reporter: 'Sunil Rao',
     reporterRole: 'Dispatch Yard Supervisor',
-    empId: 'AF-EMP-2108',
-    department: 'Central Logistics Hub, Pune',
+    empId: 'VAR-EMP-2108',
+    department: 'Central Logistics Hub, Chakan, Pune',
     assetTag: 'SRV-SAP-GT02',
     urgency: 'High',
     slaTime: 'Within 4 Hours',
@@ -249,8 +249,8 @@ const INITIAL_TICKETS = [
     category: 'Printer & Labeling',
     reporter: 'Priya Nair',
     reporterRole: 'Packaging Lead',
-    empId: 'AF-EMP-3312',
-    department: 'Packaging & Dispatch, Faridabad',
+    empId: 'VAR-EMP-3312',
+    department: 'Polymer & Lighting Division, Chakan, Pune',
     assetTag: 'PRN-ZBR-99',
     urgency: 'Medium',
     slaTime: 'Within 24 Hours',
@@ -270,8 +270,8 @@ const INITIAL_TICKETS = [
     category: 'Network & Wi-Fi',
     reporter: 'Deepak Verma',
     reporterRole: 'QC Metallurgist',
-    empId: 'AF-EMP-5190',
-    department: 'Foundry & Metallurgy, Faridabad Plant',
+    empId: 'VAR-EMP-5190',
+    department: 'Precision Forging & Machining, Chakan, Pune',
     assetTag: 'AP-CISCO-BAY3',
     urgency: 'Low',
     slaTime: 'Within 72 Hours',
@@ -323,8 +323,8 @@ export default function App() {
   // New Complaint / Ticket Form State
   const [formData, setFormData] = useState({
     empName: 'Rajesh Kumar',
-    empId: 'AF-EMP-4091',
-    department: 'Production Engineering, Manesar Plant 2',
+    empId: 'VAR-EMP-4091',
+    department: 'Manufacturing Operations, Chakan Plant, Pune',
     assetTag: '',
     category: 'Hardware',
     subject: '',
@@ -491,8 +491,8 @@ export default function App() {
     // Reset Form
     setFormData({
       empName: 'Rajesh Kumar',
-      empId: 'AF-EMP-4091',
-      department: 'Production Engineering, Manesar Plant 2',
+      empId: 'VAR-EMP-4091',
+      department: 'Manufacturing Operations, Chakan Plant, Pune',
       assetTag: '',
       category: 'Hardware',
       subject: '',
@@ -514,7 +514,7 @@ export default function App() {
     e.preventDefault();
     if (cart.length === 0) return;
 
-    const orderId = `AF-ORD-2026-${Math.floor(1000 + Math.random() * 9000)}`;
+    const orderId = `VAR-ORD-2026-${Math.floor(1000 + Math.random() * 9000)}`;
     setOrderConfirmed({
       orderId,
       items: [...cart],
@@ -613,10 +613,10 @@ export default function App() {
               <div>
                 <div className="flex items-center space-x-1.5">
                   <span className="font-extrabold text-lg sm:text-xl tracking-tight text-[#0a192f]">
-                    AUTOFORGE
+                    VARROC
                   </span>
                   <span className="text-[10px] font-bold uppercase tracking-wider bg-orange-100 text-orange-800 px-1.5 py-0.5 rounded">
-                    COMPONENTS PVT. LTD.
+                    ENGINEERING LIMITED
                   </span>
                 </div>
                 <p className="text-[10px] uppercase tracking-wider text-slate-500 font-medium">
@@ -654,7 +654,7 @@ export default function App() {
                         setCurrentView('home');
                       }
                     }}
-                    placeholder="Search by Part Name, OEM No, or SKU (e.g. AF-BRK-1200-S)..."
+                    placeholder="Search by Part Name, OEM No, or SKU (e.g. VAR-BRK-1200-S)..."
                     className="w-full text-xs px-3 py-2 bg-transparent outline-none text-slate-800 placeholder-slate-400"
                   />
                   {searchQuery && (
@@ -1065,15 +1065,15 @@ export default function App() {
               <div className="space-y-3 text-slate-300">
                 <div>
                   <strong className="text-white block">Plant 1 (Forging & Metallurgy):</strong>
-                  <span className="text-slate-400">Sector 24, Industrial Area, Faridabad, Haryana</span>
+                  <span className="text-slate-400">Sector 10, MIDC Chakan Phase II, Pune, Maharashtra 410501</span>
                 </div>
                 <div>
                   <strong className="text-white block">Plant 2 (Precision Machining):</strong>
-                  <span className="text-slate-400">Chakan MIDC Phase II, Pune, Maharashtra</span>
+                  <span className="text-slate-400">Plant 2 (Forging & Machining): Phase II, MIDC Chakan, Pune</span>
                 </div>
                 <div>
                   <strong className="text-white block">Central Logistics Hub:</strong>
-                  <span className="text-slate-400">Sriperumbudur Corridor, Chennai, Tamil Nadu</span>
+                  <span className="text-slate-400">Central Logistics Hub: Chakan-Talegaon Industrial Area, Pune</span>
                 </div>
               </div>
             </div>
@@ -1127,7 +1127,7 @@ export default function App() {
           </div>
 
           <div className="text-center pt-4 border-t border-slate-800/80 text-[11px] text-slate-400">
-            &copy; 2026 AutoForge Components Pvt. Ltd. All rights reserved. Precision Automotive Engineering Portal.
+            &copy; 2026 Varroc Engineering Limited All rights reserved. Precision Automotive Engineering Portal.
           </div>
         </div>
       </footer>
@@ -1208,7 +1208,7 @@ function StorefrontHomeView({
                 </button>
                 <button
                   onClick={() => {
-                    alert('AutoForge Complete 2026 OEM Parts Catalog (PDF - 48MB) demonstration download initialized.');
+                    alert('Varroc Engineering Complete 2026 OEM Parts Catalog (PDF - 48MB) demonstration download initialized.');
                   }}
                   className="bg-slate-800 hover:bg-slate-700 text-white font-semibold px-6 py-3 rounded-lg text-xs sm:text-sm border border-slate-600 flex items-center space-x-2 transition"
                 >
@@ -1258,7 +1258,7 @@ function StorefrontHomeView({
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-[11px] bg-black/80 backdrop-blur p-2.5 rounded-lg border border-white/10">
                   <span className="text-orange-400 font-bold flex items-center">
                     <span className="w-2 h-2 rounded-full bg-orange-500 mr-1.5 animate-pulse"></span>
-                    FORGED IN PUNE &amp; FARIDABAD
+                    MANUFACTURED IN CHAKAN, PUNE
                   </span>
                   <span className="text-slate-300 font-mono text-[10px]">
                     TURBOCHARGER 19,000 RPM Dynamic Balanced Cartridge
@@ -1341,10 +1341,10 @@ function StorefrontHomeView({
             <div className="mt-3 pt-3 border-t border-slate-100 flex flex-wrap items-center gap-2 text-[11px] text-slate-500">
               <span className="font-semibold text-slate-700">Popular OEM Searches:</span>
               <button
-                onClick={() => setSearchQuery('AF-BRK-1200-S')}
+                onClick={() => setSearchQuery('VAR-BRK-1200-S')}
                 className="bg-slate-100 hover:bg-slate-200 px-2 py-0.5 rounded text-slate-700 transition"
               >
-                #AF-BRK-1200-S (Brake Rotor)
+                #VAR-BRK-1200-S (Brake Rotor)
               </button>
               <button
                 onClick={() => setSearchQuery('Turbocharger')}
@@ -1658,14 +1658,14 @@ function StorefrontHomeView({
         )}
       </section>
 
-      {/* 5. WHY INDUSTRIAL FLEETS & GARAGES CHOOSE AUTOFORGE (MATCHING MOCKUP) */}
+      {/* 5. WHY INDUSTRIAL FLEETS & GARAGES CHOOSE VARROC (MATCHING MOCKUP) */}
       <section className="max-w-7xl mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-8">
           <span className="text-[11px] font-bold text-orange-600 uppercase tracking-widest block">
             ZERO DEFECT COMMITMENT
           </span>
           <h2 className="text-2xl font-black text-slate-900 tracking-tight mt-1">
-            Why Industrial Fleets &amp; Certified Garages Choose AutoForge
+            Why Industrial Fleets &amp; Certified Garages Choose Varroc Engineering
           </h2>
           <p className="text-xs text-slate-500 mt-2">
             Engineered for severe duty cycles, commercial logistics uptime, and exact fitment reliability across Indian terrain.
@@ -1731,7 +1731,7 @@ function StorefrontHomeView({
           <div>
             <div className="text-2xl sm:text-3xl font-black text-orange-400">4</div>
             <div className="text-xs text-slate-300 font-medium mt-1">Foundry &amp; Forging Plants</div>
-            <div className="text-[10px] text-slate-400">Faridabad, Pune, Chennai, Jamshedpur</div>
+            <div className="text-[10px] text-slate-400">Chakan (Pune), Pantnagar, Aurangabad, Chennai</div>
           </div>
           <div>
             <div className="text-2xl sm:text-3xl font-black text-white">45,000+</div>
@@ -1759,7 +1759,7 @@ function StorefrontHomeView({
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-orange-400 flex items-center space-x-1.5 mb-1">
                   <Cpu className="w-3.5 h-3.5" />
-                  <span>INTERNAL WORKFORCE SERVICES &middot; AUTOFORGE ENTERPRISE PORTAL</span>
+                  <span>INTERNAL WORKFORCE SERVICES &middot; VARROC ENTERPRISE PORTAL</span>
                 </span>
                 <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight">
                   Integrated Employee IT Helpdesk &amp; Workplace Complaint Tracking
@@ -2139,7 +2139,7 @@ function ProductDetailsView({
           {activeTab === 'warranty' && (
             <div className="space-y-3 text-xs text-slate-600">
               <p>
-                All AutoForge components are backed by a comprehensive commercial fleet replacement warranty:
+                All Varroc Engineering components are backed by a comprehensive commercial fleet replacement warranty:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
                 <div className="p-3 bg-slate-50 rounded-lg border border-slate-200">
@@ -2163,7 +2163,7 @@ function ProductDetailsView({
       {/* Related Products Recommendation */}
       <div>
         <h3 className="text-base font-bold text-slate-900 mb-4">
-          Other Precision Components from AutoForge
+          Other Precision Components from Varroc Engineering
         </h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {allProducts
@@ -2551,7 +2551,7 @@ function HelpdeskDashboardView({
             Employee IT Helpdesk &amp; Incident Operations
           </h1>
           <p className="text-xs text-slate-500 mt-1">
-            AutoForge internal engineering service desk, telemetry diagnostics, and equipment redressal management.
+            Varroc Engineering internal engineering service desk, telemetry diagnostics, and equipment redressal management.
           </p>
         </div>
 
@@ -2915,7 +2915,7 @@ function RaiseTrackComplaintsView({
             Enterprise Service &amp; Grievance Redressal
           </h1>
           <p className="text-xs text-slate-500 mt-1 max-w-2xl leading-relaxed">
-            AutoForge Internal Employee Service, IT Diagnostics &amp; Workplace Grievance Redressal System. Rapid response protocol for precision shopfloor and corporate operations.
+            Varroc Engineering Internal Employee Service, IT Diagnostics &amp; Workplace Grievance Redressal System. Rapid response protocol for precision shopfloor and corporate operations.
           </p>
         </div>
 
@@ -3012,7 +3012,7 @@ function RaiseTrackComplaintsView({
                       value={formData.isAnonymous ? 'ANON-SECURE' : formData.empId}
                       onChange={(e) => setFormData({ ...formData, empId: e.target.value })}
                       className="w-full text-xs pl-8 pr-3 py-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50 font-mono"
-                      placeholder="e.g. AF-EMP-4091"
+                      placeholder="e.g. VAR-EMP-4091"
                     />
                   </div>
                   {formErrors.empId && (
@@ -3035,10 +3035,10 @@ function RaiseTrackComplaintsView({
                     onChange={(e) => setFormData({ ...formData, department: e.target.value })}
                     className="w-full text-xs p-2.5 border border-slate-300 rounded-lg outline-none focus:ring-2 focus:ring-orange-500 bg-slate-50"
                   >
-                    <option value="Production Engineering, Manesar Plant 2">
-                      Production Engineering, Manesar Plant 2
+                    <option value="Manufacturing Operations, Chakan Plant, Pune">
+                      Manufacturing Operations, Chakan Plant, Pune
                     </option>
-                    <option value="Foundry & Metallurgy, Faridabad Plant">
+                    <option value="Precision Forging & Machining, Chakan, Pune">
                       Foundry &amp; Metallurgy, Faridabad Plant
                     </option>
                     <option value="Precision Machining, Chakan MIDC Pune">
@@ -3047,7 +3047,7 @@ function RaiseTrackComplaintsView({
                     <option value="Packaging & Dispatch, Central Warehouse">
                       Packaging &amp; Dispatch, Central Warehouse
                     </option>
-                    <option value="Corporate IT & Administration, Gurgaon">
+                    <option value="Corporate IT & Administration, Pune Head Office">
                       Corporate IT &amp; Administration, Gurgaon
                     </option>
                   </select>
@@ -3246,8 +3246,8 @@ function RaiseTrackComplaintsView({
                   onClick={() => {
                     setFormData({
                       empName: 'Rajesh Kumar',
-                      empId: 'AF-EMP-4091',
-                      department: 'Production Engineering, Manesar Plant 2',
+                      empId: 'VAR-EMP-4091',
+                      department: 'Manufacturing Operations, Chakan Plant, Pune',
                       assetTag: '',
                       category: 'Hardware',
                       subject: '',
@@ -3315,7 +3315,7 @@ function RaiseTrackComplaintsView({
                 <span>Confidentiality &amp; Ethics</span>
               </div>
               <p className="text-xs text-slate-500 leading-relaxed">
-                AutoForge operates under strict compliance with the POSH Act 2013 and Whistleblower Protection Directives. Workplace grievances tagged under ethics are encrypted end-to-end and bypass plant operational staff, landing exclusively with the Internal Corporate Oversight Committee.
+                Varroc Engineering operates under strict compliance with the POSH Act 2013 and Whistleblower Protection Directives. Workplace grievances tagged under ethics are encrypted end-to-end and bypass plant operational staff, landing exclusively with the Internal Corporate Oversight Committee.
               </p>
               <div className="p-2.5 bg-orange-50 rounded-lg text-[10px] text-orange-800 font-medium">
                 Anonymous reporting enabled upon toggling Ethics category.
